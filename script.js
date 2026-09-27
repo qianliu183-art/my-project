@@ -31,12 +31,3 @@ if ('IntersectionObserver' in window) {
 } else {
   revealItems.forEach(item => item.classList.add('visible'));
 }
-
-// Keep contact details easy to copy on mobile while still opening the mail app.
-const mailLink = document.querySelector('.contact-bottom .button');
-const toast = document.querySelector('.toast');
-mailLink.addEventListener('click', () => {
-  toast.textContent = '已为你打开邮件应用：hello@yuanlan.tech';
-  toast.classList.add('show');
-  window.setTimeout(() => toast.classList.remove('show'), 2600);
-});
